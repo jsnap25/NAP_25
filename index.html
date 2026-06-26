@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jsnap｜Nothing Above Pure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#top"><span>J</span>snap</a>
+    <nav>
+      <a href="#ingredients">成分</a>
+      <a href="#heat">加熱</a>
+      <a href="#order">購買</a>
+      <a href="#storage">保存</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <img src="images/hero.jpg" alt="Jsnap 蛋黃酥禮盒" class="hero-img" />
+      <div class="hero-content">
+        <p class="eyebrow">Nothing Above Pure</p>
+        <h1><span>J</span>snap</h1>
+        <p class="hero-text">沒有什麼比天然純粹更重要的食材製成。</p>
+        <p class="hero-sub">嚴選安心食材，手工製作每一顆蛋黃酥，只為讓你品嚐到最真實的幸福滋味。</p>
+        <a href="#order" class="primary-btn">立即訂購</a>
+      </div>
+    </section>
+
+    <section id="ingredients" class="section cream">
+      <div class="section-title">
+        <h2>成分表</h2>
+        <p>INGREDIENTS</p>
+      </div>
+      <div class="ingredient-grid">
+        <div class="card">鹹蛋黃</div>
+        <div class="card">豆沙</div>
+        <div class="card">19號無水奶油</div>
+        <div class="card">自製豬油</div>
+        <div class="card">中筋麵粉</div>
+        <div class="card">低筋麵粉</div>
+        <div class="card">水</div>
+      </div>
+    </section>
+
+    <section id="heat" class="section split">
+      <div>
+        <div class="section-title left">
+          <h2>加熱方式</h2>
+          <p>HOW TO HEAT</p>
+        </div>
+        <div class="heat-grid">
+          <div class="heat-card">
+            <h3>方式一</h3>
+            <p>烤箱預熱至 <strong>180°C</strong></p>
+            <p><strong>5 分鐘</strong></p>
+          </div>
+          <div class="heat-card">
+            <h3>方式二</h3>
+            <p>氣炸鍋 <strong>180°C</strong></p>
+            <p><strong>5 分鐘</strong></p>
+          </div>
+        </div>
+      </div>
+      <div class="note">
+        <strong>！加熱小叮嚀！</strong>
+        <p>冷凍蛋黃酥回烤前請先退冰。</p>
+      </div>
+    </section>
+
+    <section id="order" class="section cream">
+      <div class="section-title">
+        <h2>購買表單</h2>
+        <p>ORDER FORM</p>
+      </div>
+
+      <form class="order-box" id="orderForm">
+        <div class="form-group full">
+          <label>選擇口味</label>
+          <div class="flavor-row">
+            <label class="flavor-card"><input type="radio" name="flavor" value="紅豆" checked><span>1<br>紅豆</span></label>
+            <label class="flavor-card"><input type="radio" name="flavor" value="綠豆"><span>2<br>綠豆</span></label>
+            <label class="flavor-card"><input type="radio" name="flavor" value="綜合（紅豆綠豆）"><span>3<br>綜合<br>紅豆綠豆</span></label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="name">購買人姓名</label>
+          <input id="name" type="text" placeholder="請輸入姓名" />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">手機號碼</label>
+          <input id="phone" type="tel" placeholder="請輸入手機" />
+        </div>
+
+        <div class="form-group full">
+          <label for="address">取貨 / 收件資料</label>
+          <input id="address" type="text" placeholder="自取可填自取；店到店請填門市資訊" />
+        </div>
+
+        <div class="form-group">
+          <label>盒數</label>
+          <div class="qty-control">
+            <button type="button" id="minus">−</button>
+            <input id="quantity" type="number" value="1" min="1" />
+            <button type="button" id="plus">＋</button>
+          </div>
+          <small>一盒六顆｜每盒 NT$500</small>
+        </div>
+
+        <div class="form-group">
+          <label>購買運送</label>
+          <label class="radio-line"><input type="radio" name="shipping" value="0" checked> 自取 NT$0</label>
+          <label class="radio-line"><input type="radio" name="shipping" value="60"> Seven 店到店 NT$60</label>
+        </div>
+
+        <div class="form-group full">
+          <label for="proof">購買證明</label>
+          <input id="proof" type="file" accept="image/*" />
+          <small>上傳轉帳截圖。提醒：GitHub Pages 無法直接接收檔案，正式訂單請使用 Google 表單上傳。</small>
+        </div>
+
+        <div class="total-card full">
+          <p>商品金額：<span id="productTotal">NT$500</span></p>
+          <p>運費：<span id="shippingFee">NT$0</span></p>
+          <h3>總購買金額：<span id="grandTotal">NT$500</span></h3>
+        </div>
+
+        <div class="button-row full">
+          <button type="button" class="primary-btn" id="calcBtn">更新總金額</button>
+          <a class="outline-btn" id="googleFormBtn" href="https://forms.gle/請換成你的Google表單連結" target="_blank" rel="noopener">前往 Google 表單下單</a>
+        </div>
+      </form>
+    </section>
+
+    <section id="storage" class="footer-section">
+      <div>
+        <h2>保存方式</h2>
+        <p>常溫 3 天｜冷藏 7 天｜冷凍 20 天</p>
+      </div>
+      <div>
+        <h2>Instagram</h2>
+        <p>@nothing_above_pure</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
